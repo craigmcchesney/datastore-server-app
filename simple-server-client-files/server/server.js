@@ -21,7 +21,7 @@ class Server {
         // catch all requests that don't match other routes
         this.app.get("*", (req, res) => {
             res.sendFile(
-                path.join(__dirname, 'build', '../client/build/index.html')
+                path.join(__dirname, '../client/build/index.html')
             );
         });
     }
