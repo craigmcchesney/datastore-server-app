@@ -1,13 +1,23 @@
 const { response } = require("express");
 
+// use NODE_CONFIG_DIR to specify config directory e.g., ../etc
+// process.env["NODE_CONFIG_DIR"] = __dirname + "/configDir/";
+const config = require("config");
+
 const getClientConfig = async (req, res = response) => {
-    // This implementation is hardwired to simply return localhost.  Once I get
-    // that working in the client, I want to change this module to use a file to
-    // save configuration settings, with a client API for specifying the hostname
-    // and whatever other parameters are needed that writes to that file, and change
-    // this API to read from it.
+    console.log("controllers/config.getClientConfig()");
+    let hostConfig = "localhost"
+    let portConfig = "8080"
+    if (config.has("datastore.grpc.host")) {
+        hostConfig = config.get("datastore.grpc.host");
+    }
+    if (config.has("datastore.grpc.port")) {
+        portConfig = config.get("datastore.grpc.port");
+    }
+    const grpcUrl = "http://" + hostConfig + ":" + portConfig;
+    console.log("grpcUrl: " + grpcUrl);
     res.json({
-        hostname: "http://localhost:8080",
+        hostname: grpcUrl,
     });
 };
 

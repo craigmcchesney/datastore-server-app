@@ -1,0 +1,8 @@
+{
+  "datastore": {
+    "grpc": {
+      "host": "data-testbed.ospreydcs.com",
+      "port": 8080
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "datastore": {
+    "grpc": {
+      "host": "localhost",
+      "port": 8080
+    }
+  }
+}

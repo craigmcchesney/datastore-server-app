@@ -1,0 +1,8 @@
+{
+  "datastore": {
+    "grpc": {
+      "host": "mpex-datastore-dev.localdomain",
+      "port": 8080
+    }
+  }
+}
