@@ -1,4 +1,4 @@
-# datastore-app-server repo overview
+# datastore-server-app repo overview
 
 The datastore-app-server repo contains a simple Node.js server implementation.  The primary purpose of the server is to deploy the static build of the [datastore-web-app](https://github.com/craigmcchesney/datastore-web-app) React application, avoiding the need to install a full Apache web server to fulfill that need.  
 
