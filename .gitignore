@@ -1,9 +1,6 @@
 # IDE directory
 /.idea/
 
-# symbolic link to client code managed in different repo
-/client
-
 # Logs
 logs
 *.log

@@ -18,9 +18,9 @@ class Server {
 
         this.app.use(express.json());
 
-        // pick up client app index.html file
+        // pick up web app index.html file
         this.app.use(
-            express.static(path.join(__dirname, '../client/build'))
+            express.static(path.join(__dirname, '../../datastore-web-app/build'))
         );
     }
 
@@ -35,7 +35,7 @@ class Server {
         // catch all requests that don't match other routes
         this.app.get("*", (req, res) => {
             res.sendFile(
-                path.join(__dirname, '../client/build/index.html')
+                path.join(__dirname, '../../datastore-web-app/build/index.html')
             );
         });
     }
