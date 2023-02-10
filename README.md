@@ -14,6 +14,10 @@ For example, to call the config API, the web application invokes "fetch()" with 
 
 The web application is accessed via http://localhost:9000 when deployed as a statically built file running under the server.
 
+## configuration
+
+The application uses the [Node-config package](https://www.npmjs.com/package/config) to manage a hierachical config mechanism with overrides by deployment type and host name, etc.  This is presently used to manage GRPC API connection settings but its scope will be expanding as we add new features to the server app.
+
 ## server scripts
 
 The package.json file defines the following scripts for running/building the server and client applications invoked using "npm run script-name":
@@ -28,3 +32,4 @@ The package.json file defines the following scripts for running/building the ser
 * routes - Provides handlers "config.js" and "auth.js" for mapping API routes to controller functions.
 * controllers - Includes "config.js" and "auth.js" controllers with functions implementing the config and authentication APIs, respectively.
 * middleware - Includes "valiate-input.js" for validating API requests.
+* config - Contains a default config file "default.json" with host-specific overrides.
