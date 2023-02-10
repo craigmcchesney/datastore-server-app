@@ -20,10 +20,7 @@ The package.json file defines the following scripts for running/building the ser
 
 * start - Starts the server using node.
 * server - Starts the server using nodemon, which updates the running server with changes made to the underlying files automatically.
-* client - Starts the web application under the webpack development server.  This is good for development mode because changes to the web application are reflected in running instances of the application.  The web application is accessed using http://localhost:3000
-* dev - Runs the server and client in development mode.  Invokes the "server" and "client" scripts using the "concurrently" package.
-* build - Creates a static build of the web application for a "production" deployment.
-## repo directories
+
 
 * root directory - Contains package.json, package-lock.json, and the main JavaScript entry point, index.js.
 * server - Contains "server.js".  An instance of the Server class is created by index.js.  Sets up handlers for the various server routes.
