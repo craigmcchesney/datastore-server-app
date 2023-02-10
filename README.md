@@ -21,6 +21,7 @@ The package.json file defines the following scripts for running/building the ser
 * start - Starts the server using node.
 * server - Starts the server using nodemon, which updates the running server with changes made to the underlying files automatically.
 
+## repo directories
 
 * root directory - Contains package.json, package-lock.json, and the main JavaScript entry point, index.js.
 * server - Contains "server.js".  An instance of the Server class is created by index.js.  Sets up handlers for the various server routes.
